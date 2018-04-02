@@ -40,4 +40,5 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  panelizer: true
   scheduled_publication: true
