@@ -60,22 +60,22 @@ script:
   - source ${BLT_DIR}/scripts/travis/run_tests
 
 # The version below MUST match the php version indicated at the top of this file, otherwise the artifact won't build.
-deploy:
-   - provider: script
-     script: "${BLT_DIR}/scripts/travis/deploy_branch"
-     skip_cleanup: true
-     on:
-       branch: develop
-       php: 5.6
-   - provider: script
-     script: "${BLT_DIR}/scripts/travis/deploy_branch"
-     skip_cleanup: true
-     on:
-       branch: master
-       php: 5.6
-   - provider: script
-     script: "${BLT_DIR}/scripts/travis/deploy_tag"
-     skip_cleanup: true
-     on:
-       tags: true
-       php: 5.6
+# deploy:
+#    - provider: script
+#      script: "${BLT_DIR}/scripts/travis/deploy_branch"
+#      skip_cleanup: true
+#      on:
+#        branch: develop
+#        php: 5.6
+#    - provider: script
+#      script: "${BLT_DIR}/scripts/travis/deploy_branch"
+#      skip_cleanup: true
+#      on:
+#        branch: master
+#        php: 5.6
+#    - provider: script
+#      script: "${BLT_DIR}/scripts/travis/deploy_tag"
+#      skip_cleanup: true
+#      on:
+#        tags: true
+#        php: 5.6
