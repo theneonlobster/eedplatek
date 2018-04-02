@@ -6,7 +6,7 @@ dist: trusty
 # Making this version number greater than the production environment can unintended consequences including a
 # non-functional prod environment.
 php:
-  - 5.6
+  - 7.1
 
 matrix:
   fast_finish: true
