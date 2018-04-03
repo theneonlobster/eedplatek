@@ -1,3 +1,9 @@
+local:
+  root: /var/www/eedplatek/docroot
+  uri: 'http://local.eedplatek.com'
+  host: local.eedplatek.com
+  user: vagrant
+  ssh: { options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
 dev:
   root: /var/www/html/eedplatek.dev/docroot
   uri: eedplatekdev.prod.acquia-sites.com
