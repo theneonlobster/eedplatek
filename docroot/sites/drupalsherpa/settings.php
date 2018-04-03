@@ -788,5 +788,5 @@ $settings['entity_update_batch_size'] = 50;
 if (file_exists('/var/www/site-php')) {
   require '/var/www/site-php/eedplatek/drupalsherpa-settings.inc';
 }
-require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 $settings['install_profile'] = 'lightning';
+require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
