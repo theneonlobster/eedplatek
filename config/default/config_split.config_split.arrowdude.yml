@@ -1,0 +1,14 @@
+uuid: 64446a96-0d94-4f18-a6f9-cd7fd1982f3f
+langcode: en
+status: false
+dependencies: {  }
+id: arrowdude
+label: 'Arrow Dude'
+folder: ../config/sites/arrowdude
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 2

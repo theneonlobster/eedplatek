@@ -1,0 +1,14 @@
+uuid: 9c1b2437-aaf7-4586-a9fc-dbd4371f9c69
+langcode: en
+status: false
+dependencies: {  }
+id: drupalsherpa
+label: 'Drupal Sherpa'
+folder: ../config/sites/drupalsherpa
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 2
