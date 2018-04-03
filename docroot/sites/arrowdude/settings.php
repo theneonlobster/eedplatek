@@ -786,6 +786,8 @@ $settings['entity_update_batch_size'] = 50;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 if (file_exists('/var/www/site-php')) {
+  // Tempoary fix for CL-21595.
+  $_SERVER['PWD'] = DRUPAL_ROOT;
   require '/var/www/site-php/eedplatek/arrowdude-settings.inc';
 }
 $settings['install_profile'] = 'lightning';
