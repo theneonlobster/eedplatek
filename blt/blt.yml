@@ -28,3 +28,6 @@ modules:
   prod:
     enable: {  }
     uninstall: {  }
+multisites:
+  - default
+  - drupalsherpa
