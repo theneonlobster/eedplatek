@@ -6,5 +6,5 @@ project:
   human_name: drupalsherpa
 drush:
   aliases:
-    local: drupalsherpa.local
+    local: self
     remote: drupalsherpa.test
