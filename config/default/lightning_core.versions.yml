@@ -91,3 +91,5 @@ lightning_scheduler: 0.0.0
 lightning: 0.0.0
 config_filter: 1.1.0
 config_split: 1.3.0
+admin_toolbar: 1.23.0
+admin_toolbar_tools: 1.23.0
