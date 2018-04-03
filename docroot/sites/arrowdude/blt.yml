@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.arrowdude.com
+    protocol: http
+  machine_name: arrowdude
+  human_name: arrowdude
+drush:
+  aliases:
+    local: arrowdude.local
+    remote: arrowdude.test
