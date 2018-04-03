@@ -1,0 +1,14 @@
+uuid: 2fc3a7f5-8adf-4317-8b01-79a84a615644
+langcode: en
+status: false
+dependencies: {  }
+id: lightning
+label: Lightning
+folder: ../config/profiles/lightning
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
