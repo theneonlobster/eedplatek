@@ -94,3 +94,4 @@ config_split: 1.3.0
 admin_toolbar: 1.23.0
 admin_toolbar_tools: 1.23.0
 config_ignore: 2.1.0
+pathauto: 1.1.0
