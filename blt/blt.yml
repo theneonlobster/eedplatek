@@ -31,3 +31,4 @@ modules:
 multisites:
   - default
   - drupalsherpa
+  - arrowdude
