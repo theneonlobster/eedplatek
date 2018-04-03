@@ -1,0 +1,28 @@
+uuid: 2c8c2f78-1e21-4f3d-ac48-1e93d643c275
+langcode: en
+status: true
+dependencies: {  }
+id: blog_entry_creator
+label: 'Blog entry creator'
+weight: 7
+is_admin: null
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node blog_entry content'
+  - 'administer panelizer node blog_entry layout'
+  - 'change layouts in place editing'
+  - 'create blog_entry content'
+  - 'create url aliases'
+  - 'edit own blog_entry content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view blog_entry revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

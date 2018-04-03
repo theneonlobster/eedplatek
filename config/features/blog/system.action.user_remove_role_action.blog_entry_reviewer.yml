@@ -1,0 +1,14 @@
+uuid: cdd54e09-d14e-40ef-accb-1fed278e5dad
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.blog_entry_reviewer
+  module:
+    - user
+id: user_remove_role_action.blog_entry_reviewer
+label: 'Remove the Blog entry reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: blog_entry_reviewer
