@@ -6,5 +6,5 @@ project:
   human_name: arrowdude
 drush:
   aliases:
-    local: arrowdude.local
+    local: self
     remote: arrowdude.test
