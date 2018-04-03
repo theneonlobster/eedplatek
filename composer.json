@@ -6,7 +6,8 @@
     "prefer-stable": true,
     "require": {
         "acquia/blt": "9.x-dev",
-        "drupal/admin_toolbar": "^1.23"
+        "drupal/admin_toolbar": "^1.23",
+        "drupal/config_ignore": "^2.1"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "^4.8"
