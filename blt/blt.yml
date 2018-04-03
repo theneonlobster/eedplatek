@@ -1,20 +1,15 @@
 project:
-  machine_name: eedplatek
   prefix: TNL
-  human_name: 'theNeonLobster'
+  human_name: theNeonLobster
   profile:
     name: lightning
-  local:
-    protocol: http
-    hostname: 'local.${project.machine_name}.com'
+  local: {  }
 git:
   default_branch: master
   remotes:
     - 'eedplatek@svn-9994.prod.hosting.acquia.com:eedplatek.git'
 drush:
   aliases:
-    remote: '${project.machine_name}.test'
-    local: self
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:

@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.drupalsherpa.com
+    protocol: http
+  machine_name: drupalsherpa
+  human_name: drupalsherpa
+drush:
+  aliases:
+    local: drupalsherpa.local
+    remote: drupalsherpa.test

@@ -1,0 +1,9 @@
+project:
+  local:
+    hostname: local.eedplatek.com
+    protocol: http
+  machine_name: eedplatek
+drush:
+  aliases:
+    local: self
+    remote: eedplatek.test
