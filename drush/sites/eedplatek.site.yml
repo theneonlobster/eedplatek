@@ -1,6 +1,20 @@
-local:
-    root: /var/www/eedplatek/docroot
-    uri: 'http://local.eedplatek.com'
-    host: local.eedplatek.com
-    user: vagrant
-    ssh: { options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+dev:
+  root: /var/www/html/eedplatek.dev/docroot
+  uri: eedplatekdev.prod.acquia-sites.com
+  host: staging-9174.prod.hosting.acquia.com
+  user: eedplatek.dev
+ode1:
+  root: /var/www/html/eedplatek.ode1/docroot
+  uri: eedplatekode1.prod.acquia-sites.com
+  host: eedplatekode1.ssh.prod.acquia-sites.com
+  user: eedplatek.ode1
+prod:
+  root: /var/www/html/eedplatek.prod/docroot
+  uri: eedplatek.prod.acquia-sites.com
+  host: ded-3545.prod.hosting.acquia.com
+  user: eedplatek.prod
+test:
+  root: /var/www/html/eedplatek.test/docroot
+  uri: eedplatektest.prod.acquia-sites.com
+  host: staging-9173.prod.hosting.acquia.com
+  user: eedplatek.test
