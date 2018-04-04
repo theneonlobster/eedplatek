@@ -46,6 +46,11 @@
             "bower-asset",
             "npm-asset"
         ],
+        "patches": {
+          "drupal/redirect": {
+            "Catch 'Route does not exist' exception when getting entity internal path": "https://www.drupal.org/files/issues/redirect-catch-route-does-not-exist-2932263-15.patch"
+          }
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
