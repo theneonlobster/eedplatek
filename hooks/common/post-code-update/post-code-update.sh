@@ -27,7 +27,7 @@ repo_root="/var/www/html/$site.$target_env"
 export PATH=$repo_root/vendor/bin:$PATH
 cd $repo_root
 
-if [ "$target_env" != 'ode1' ]; then
+if [ "$target_env" != 'ode*' ]; then
   blt artifact:ac-hooks:post-code-update $site $target_env $source_branch $deployed_tag $repo_url $repo_type --environment=$target_env -v --yes --no-interaction
 fi
 
