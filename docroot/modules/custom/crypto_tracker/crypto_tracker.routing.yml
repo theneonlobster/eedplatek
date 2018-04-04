@@ -1,0 +1,23 @@
+crypto_tracker:
+  path: 'crypto'
+  defaults:
+    _controller: '\Drupal\crypto_tracker\Controller\CryptoTrackerController::ticker'
+    _title: 'Crypto Tracker'
+  requirements:
+    _permission: 'access content'
+
+currency_tracker:
+  path: 'crypto/{currency}'
+  defaults:
+    _controller: '\Drupal\crypto_tracker\Controller\CryptoTrackerController::currency'
+    _title: 'Currency Tracker'
+  requirements:
+    _permission: 'access content'
+
+crypto_settings:
+  path: 'admin/config/services/crypto-tracker'
+  defaults:
+    _form: '\Drupal\crypto_tracker\Form\CryptoTrackerSettingsForm'
+    _title: 'Crypto Tracker Settings'
+  requirements:
+    _permission: 'administer crypto_tracker'

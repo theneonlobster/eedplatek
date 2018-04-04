@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * Module file for crypto_tracker.
+ */
+
+/**
+ * Define custom theme templates.
+ */
+function crypto_tracker_theme($existing, $type, $theme, $path) {
+  return [
+    'crypto_tracker' => [
+      'variables' => [
+        'items' => NULL,
+        'list_type' => NULL,
+      ],
+    ],
+    'currency_tracker' => [
+      'variables' => [
+        'items' => NULL,
+        'list_type' => NULL,
+      ],
+    ],
+  ];
+}

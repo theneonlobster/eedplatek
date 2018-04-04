@@ -1,0 +1,6 @@
+name: Crypto Tracker
+type: module
+description: 'Display live cryptocurrency values in blocks and pages.'
+package: Custom
+core: 8.x
+configure: crypto_settings

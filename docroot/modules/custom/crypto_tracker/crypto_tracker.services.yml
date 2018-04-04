@@ -1,0 +1,5 @@
+# Service definition in YAML.
+services:
+  crypto_tracker.client:
+    class: Drupal\crypto_tracker\CryptoTrackerClient
+    arguments: ['@http_client', '@config.factory']
