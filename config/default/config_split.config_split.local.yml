@@ -9,7 +9,6 @@ module: {  }
 theme: {  }
 blacklist: {  }
 graylist:
-  - acquia_connector.settings
   - system.performance
 graylist_dependents: true
 graylist_skip_equal: true
