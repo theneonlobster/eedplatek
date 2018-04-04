@@ -95,3 +95,5 @@ admin_toolbar: 1.23.0
 admin_toolbar_tools: 1.23.0
 config_ignore: 2.1.0
 pathauto: 1.1.0
+ban: 8.5.1
+login_security: 1.3.0

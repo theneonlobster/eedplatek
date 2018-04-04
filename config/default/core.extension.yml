@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  ban: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -56,6 +57,7 @@ module:
   lightning_search: 0
   lightning_workflow: 0
   link: 0
+  login_security: 0
   media: 0
   media_entity_instagram: 0
   media_entity_twitter: 0
