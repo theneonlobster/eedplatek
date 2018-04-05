@@ -23,6 +23,7 @@ blacklist:
   - codesnippet.settings
   - core.entity_form_display.node.blog_entry.default
 graylist:
+  - coffee.configuration
   - core.extension
   - editor.editor.rich_text
   - lightning_core.versions
