@@ -1,6 +1,7 @@
 ignored_config_entities:
-  0: acquia_connector.settings
-  2: 'config_split.config_split.blog:status'
-  4: 'config_split.config_split.theneonlobster:status'
+  0: 'system.site:name'
+  2: acquia_connector.settings
+  4: 'config_split.config_split.blog:status'
+  6: 'config_split.config_split.theneonlobster:status'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
