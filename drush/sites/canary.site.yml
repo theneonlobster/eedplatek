@@ -1,2 +1,23 @@
 local:
   uri: canary
+local:
+  root: /var/www/eedplatek/docroot
+  uri: 'http://local.canary.com'
+  host: local.canary.com
+  user: vagrant
+  ssh: { options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
+dev:
+  root: /var/www/html/eedplatek.dev/docroot
+  uri: green.theneonlobster.com
+  host: staging-9174.prod.hosting.acquia.com
+  user: eedplatek.dev
+prod:
+  root: /var/www/html/eedplatek.prod/docroot
+  uri: red.theneonlobster.com
+  host: ded-3545.prod.hosting.acquia.com
+  user: eedplatek.prod
+test:
+  root: /var/www/html/eedplatek.test/docroot
+  uri: yellow.theneonlobster.com
+  host: staging-9173.prod.hosting.acquia.com
+  user: eedplatek.test
