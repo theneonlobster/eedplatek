@@ -20,13 +20,7 @@ blacklist:
   - user.role.blog_entry_creator
   - user.role.blog_entry_reviewer
   - core.base_field_override.node.blog_entry.promote
-  - codesnippet.settings
-  - core.entity_form_display.node.blog_entry.default
-graylist:
-  - coffee.configuration
-  - core.extension
-  - editor.editor.rich_text
-  - lightning_core.versions
+graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0

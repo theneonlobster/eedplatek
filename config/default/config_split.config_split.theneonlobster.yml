@@ -7,9 +7,11 @@ label: TheNeonLobster
 folder: ../config/sites/theneonlobster
 module: {  }
 theme: {  }
-blacklist: {  }
+blacklist:
+  - codesnippet.settings
 graylist:
   - config_split.config_split.blog
+  - editor.editor.rich_text
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 2
