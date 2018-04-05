@@ -1,6 +1,4 @@
 local:
-  uri: canary
-local:
   root: /var/www/eedplatek/docroot
   uri: 'http://local.canary.com'
   host: local.canary.com
