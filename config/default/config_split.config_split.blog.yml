@@ -1,6 +1,6 @@
 uuid: c4788d2f-4b84-4f99-95c9-25f417f2b700
 langcode: en
-status: false
+status: true
 dependencies: {  }
 id: blog
 label: Blog
@@ -8,7 +8,6 @@ folder: ../config/features/blog
 module: {  }
 theme: {  }
 blacklist:
-  - core.base_field_override.node.blog_entry.promote
   - core.entity_form_display.node.blog_entry.default
   - core.entity_view_display.node.blog_entry.default
   - core.entity_view_display.node.blog_entry.teaser
@@ -20,7 +19,13 @@ blacklist:
   - system.action.user_remove_role_action.blog_entry_reviewer
   - user.role.blog_entry_creator
   - user.role.blog_entry_reviewer
-graylist: {  }
+  - core.base_field_override.node.blog_entry.promote
+  - codesnippet.settings
+  - core.entity_form_display.node.blog_entry.default
+graylist:
+  - core.extension
+  - editor.editor.rich_text
+  - lightning_core.versions
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
