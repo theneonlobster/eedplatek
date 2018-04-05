@@ -1,0 +1,10 @@
+project:
+  local:
+    hostname: local.canary.com
+    protocol: http
+  machine_name: canary
+  human_name: canary
+drush:
+  aliases:
+    local: canary.local
+    remote: canary.test
