@@ -787,3 +787,20 @@ $settings['entity_update_batch_size'] = 50;
 # }
 $settings['install_profile'] = 'lightning';
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+if ($is_ah_prod_env) {
+  $config['environment_indicator.indicator']['bg_color'] = '#941100';
+  $config['environment_indicator.indicator']['fg_color'] = '#000000';
+  $config['environment_indicator.indicator']['name'] = 'Production';
+} elseif ($is_ah_stage_env) {
+  $config['environment_indicator.indicator']['bg_color'] = '#FFFC79';
+  $config['environment_indicator.indicator']['fg_color'] = '#000000';
+  $config['environment_indicator.indicator']['name'] = 'Stage';
+} elseif ($is_ah_dev_env) {
+  $config['environment_indicator.indicator']['bg_color'] = '#008F00';
+  $config['environment_indicator.indicator']['fg_color'] = '#000000';
+  $config['environment_indicator.indicator']['name'] = 'Dev';
+} elseif ($is_ah_ode_env) {
+  $config['environment_indicator.indicator']['bg_color'] = '#000000';
+  $config['environment_indicator.indicator']['fg_color'] = '#FFFFFF';
+  $config['environment_indicator.indicator']['name'] = 'ODE';
+}
