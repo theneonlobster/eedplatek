@@ -8,6 +8,7 @@ folder: ../config/features/blog
 module: {  }
 theme: {  }
 blacklist:
+  - core.base_field_override.node.blog_entry.promote
   - core.entity_form_display.node.blog_entry.default
   - core.entity_view_display.node.blog_entry.default
   - core.entity_view_display.node.blog_entry.teaser
@@ -19,13 +20,7 @@ blacklist:
   - system.action.user_remove_role_action.blog_entry_reviewer
   - user.role.blog_entry_creator
   - user.role.blog_entry_reviewer
-  - core.base_field_override.node.blog_entry.promote
-  - codesnippet.settings
-  - core.entity_form_display.node.blog_entry.default
-graylist:
-  - core.extension
-  - editor.editor.rich_text
-  - lightning_core.versions
+graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
 weight: 0
