@@ -57,3 +57,6 @@
  */
  $sites['drupalsherpa.com'] = 'drupalsherpa';
  $sites['arrowdude.com'] = 'arrowdude';
+ $sites['red.theneonlobster.com'] = 'canary';
+ $sites['yellow.theneonlobster.com'] = 'canary';
+ $sites['green.theneonlobster.com'] = 'canary';

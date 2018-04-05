@@ -785,5 +785,10 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+if (file_exists('/var/www/site-php')) {
+  // Tempoary fix for CL-21595.
+  $_SERVER['PWD'] = DRUPAL_ROOT;
+  require '/var/www/site-php/eedplatek/canary-settings.inc';
+}
 $settings['install_profile'] = 'lightning';
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
