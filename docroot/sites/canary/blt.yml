@@ -6,5 +6,5 @@ project:
   human_name: canary
 drush:
   aliases:
-    local: canary.local
+    local: self
     remote: canary.test
