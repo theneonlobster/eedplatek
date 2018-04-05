@@ -4,12 +4,30 @@
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "repositories": [
+      {
+        "type": "package",
+        "package": {
+          "name": "ckeditor/codesnippet",
+          "version": "4.9.1",
+          "type": "drupal-library",
+          "dist": {
+            "type": "zip",
+            "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.1.zip"
+          },
+          "autoload": {
+            "classmap": ["."]
+          }
+        }
+      }
+    ],
     "require": {
         "acquia/blt": "9.x-dev",
         "drupal/admin_toolbar": "^1.23",
         "drupal/asset_injector": "^2.1",
         "drupal/bootstrap": "^3.11",
         "drupal/bootstrap_paragraphs": "^2.0@beta",
+        "drupal/codesnippet": "^1.6",
         "drupal/colorbox": "^1.4",
         "drupal/config_ignore": "^2.1",
         "drupal/ds": "^3.1",
@@ -27,7 +45,8 @@
         "drupal/redirect": "^1.1",
         "drupal/simple_sitemap": "^2.11",
         "drupal/views_bootstrap": "^3.0",
-        "drupal/webform": "^5.0@RC"
+        "drupal/webform": "^5.0@RC",
+        "ckeditor/codesnippet": "4.9.1"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "^4.8"
