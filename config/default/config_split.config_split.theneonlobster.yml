@@ -1,0 +1,15 @@
+uuid: 3b67d6d4-4282-44fd-a62e-5f36bb8d2728
+langcode: en
+status: false
+dependencies: {  }
+id: theneonlobster
+label: TheNeonLobster
+folder: ../config/sites/theneonlobster
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist:
+  - config_split.config_split.blog
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 2

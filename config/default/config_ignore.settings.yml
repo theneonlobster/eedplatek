@@ -1,4 +1,5 @@
 ignored_config_entities:
-  - 'config_split.config_split.blog:status'
+  0: 'config_split.config_split.blog:status'
+  2: 'config_split.config_split.theneonlobster:status'
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
