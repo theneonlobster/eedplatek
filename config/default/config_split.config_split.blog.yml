@@ -1,6 +1,6 @@
 uuid: c4788d2f-4b84-4f99-95c9-25f417f2b700
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: blog
 label: Blog
