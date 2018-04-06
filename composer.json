@@ -31,6 +31,7 @@
         "drupal/codesnippet": "^1.6",
         "drupal/coffee": "^1.0@beta",
         "drupal/colorbox": "^1.4",
+        "drupal/components": "^1.0",
         "drupal/config_ignore": "^2.1",
         "drupal/ds": "^3.1",
         "drupal/entityqueue": "^1.0@alpha",
