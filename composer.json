@@ -1,121 +1,123 @@
 {
-    "name": "acquia/blt-project",
-    "description": "Project template for Drupal 8 sites built with BLT.",
-    "type": "project",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-      {
-        "type": "package",
-        "package": {
-          "name": "ckeditor/codesnippet",
-          "version": "4.9.1",
-          "type": "drupal-library",
-          "dist": {
-            "type": "zip",
-            "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.1.zip"
-          },
-          "autoload": {
-            "classmap": ["."]
-          }
+  "name": "acquia/blt-project",
+  "description": "Project template for Drupal 8 sites built with BLT.",
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "ckeditor/codesnippet",
+        "version": "4.9.1",
+        "type": "drupal-library",
+        "dist": {
+          "type": "zip",
+          "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.1.zip"
+        },
+        "autoload": {
+          "classmap": [
+            "."
+          ]
         }
       }
-    ],
-    "require": {
-        "acquia/blt": "9.x-dev",
-        "ckeditor/codesnippet": "4.9.1",
-        "drupal/admin_toolbar": "^1.23",
-        "drupal/alexa": "1.x-dev",
-        "drupal/asset_injector": "^2.1",
-        "drupal/bootstrap": "^3.11",
-        "drupal/bootstrap_paragraphs": "^2.0@beta",
-        "drupal/codesnippet": "^1.6",
-        "drupal/coffee": "^1.0@beta",
-        "drupal/colorbox": "^1.4",
-        "drupal/config_ignore": "^2.1",
-        "drupal/ds": "^3.1",
-        "drupal/entityqueue": "^1.0@alpha",
-        "drupal/extlink": "^1.0",
-        "drupal/facets": "^1.0@beta",
-        "drupal/field_group": "^1.0",
-        "drupal/google_analytics": "^2.2",
-        "drupal/honeypot": "^1.27",
-        "drupal/image_effects": "^2.0",
-        "drupal/layouts": "1.x-dev",
-        "drupal/linkit": "^4.3",
-        "drupal/login_security": "^1.3",
-        "drupal/module_filter": "^3.1",
-        "drupal/paragraphs": "^1.2",
-        "drupal/recaptcha": "^2.3",
-        "drupal/redirect": "^1.1",
-        "drupal/search_api_solr": "^1.2",
-        "drupal/simple_sitemap": "^2.11",
-        "drupal/views_bootstrap": "^3.0",
-        "drupal/webform": "^5.0@RC"
-    },
-    "require-dev": {
-        "geerlingguy/drupal-vm": "^4.8"
-    },
-    "scripts": {
-        "post-create-project-cmd": [
-            "blt internal:create-project:init-repo"
-        ]
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "enable-patching": true,
-        "installer-types": [
-            "bower-asset",
-            "npm-asset"
-        ],
-        "patches": {
-          "drupal/redirect": {
-            "Catch 'Route does not exist' exception when getting entity internal path": "https://www.drupal.org/files/issues/redirect-catch-route-does-not-exist-2932263-15.patch"
-          }
-        },
-        "installer-paths": {
-            "docroot/core": [
-                "type:drupal-core"
-            ],
-            "docroot/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "docroot/modules/custom/{$name}": [
-                "type:drupal-custom-module"
-            ],
-            "docroot/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "docroot/profiles/custom/{$name}": [
-                "type:drupal-custom-profile"
-            ],
-            "docroot/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "docroot/themes/custom/{$name}": [
-                "type:drupal-custom-theme"
-            ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
-        },
-        "merge-plugin": {
-            "require": [
-                "blt/composer.required.json",
-                "blt/composer.suggested.json"
-            ],
-            "merge-extra": true,
-            "merge-extra-deep": true,
-            "merge-scripts": true,
-            "replace": false,
-            "ignore-duplicates": true
-        }
     }
+  ],
+  "require": {
+    "acquia/blt": "9.x-dev",
+    "ckeditor/codesnippet": "4.9.1",
+    "drupal/admin_toolbar": "^1.23",
+    "drupal/alexa": "1.x-dev",
+    "drupal/asset_injector": "^2.1",
+    "drupal/bootstrap": "^3.11",
+    "drupal/bootstrap_paragraphs": "^2.0@beta",
+    "drupal/codesnippet": "^1.6",
+    "drupal/coffee": "^1.0@beta",
+    "drupal/colorbox": "^1.4",
+    "drupal/config_ignore": "^2.1",
+    "drupal/ds": "^3.1",
+    "drupal/entityqueue": "^1.0@alpha",
+    "drupal/extlink": "^1.0",
+    "drupal/facets": "^1.0@beta",
+    "drupal/field_group": "^1.0",
+    "drupal/google_analytics": "^2.2",
+    "drupal/honeypot": "^1.27",
+    "drupal/image_effects": "^2.0",
+    "drupal/layouts": "1.x-dev",
+    "drupal/linkit": "^4.3",
+    "drupal/login_security": "^1.3",
+    "drupal/module_filter": "^3.1",
+    "drupal/paragraphs": "^1.2",
+    "drupal/recaptcha": "^2.3",
+    "drupal/redirect": "^1.1",
+    "drupal/search_api_solr": "^1.2",
+    "drupal/simple_sitemap": "^2.11",
+    "drupal/views_bootstrap": "^3.0",
+    "drupal/webform": "^5.0@RC"
+  },
+  "require-dev": {
+    "geerlingguy/drupal-vm": "^4.8"
+  },
+  "scripts": {
+    "post-create-project-cmd": [
+      "blt internal:create-project:init-repo"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "enable-patching": true,
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "patches": {
+      "drupal/redirect": {
+        "Catch 'Route does not exist' exception when getting entity internal path": "https://www.drupal.org/files/issues/redirect-catch-route-does-not-exist-2932263-15.patch"
+      }
+    },
+    "installer-paths": {
+      "docroot/core": [
+        "type:drupal-core"
+      ],
+      "docroot/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "docroot/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "docroot/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "docroot/profiles/custom/{$name}": [
+        "type:drupal-custom-profile"
+      ],
+      "docroot/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "docroot/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "merge-plugin": {
+      "require": [
+        "blt/composer.required.json",
+        "blt/composer.suggested.json"
+      ],
+      "merge-extra": true,
+      "merge-extra-deep": true,
+      "merge-scripts": true,
+      "replace": false,
+      "ignore-duplicates": true
+    }
+  }
 }
