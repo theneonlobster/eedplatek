@@ -1,0 +1,8 @@
+name: CryptAlexa
+type: module
+description: Demostrates an integration to Amazon Echo.
+core: 8.x
+package: Alexa
+dependencies:
+  - alexa
+  - crypto_tracker

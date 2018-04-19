@@ -1,0 +1,6 @@
+services:
+  cryptalexa.request_subscriber:
+    class: Drupal\cryptalexa\EventSubscriber\RequestSubscriber
+    arguments: ['@crypto_tracker.client']
+    tags:
+      - { name: event_subscriber }
