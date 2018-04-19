@@ -7,4 +7,4 @@ project:
 drush:
   aliases:
     local: self
-    remote: drupalsherpa.test
+    remote: drupalsherpa.prod

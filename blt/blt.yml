@@ -11,7 +11,7 @@ git:
     - 'eedplatek@svn-9994.prod.hosting.acquia.com:eedplatek.git'
 drush:
   aliases:
-    remote: '${project.machine_name}.test'
+    remote: '${project.machine_name}.prod'
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'

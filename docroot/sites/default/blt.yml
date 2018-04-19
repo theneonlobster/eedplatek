@@ -6,4 +6,4 @@ project:
 drush:
   aliases:
     local: self
-    remote: eedplatek.test
+    remote: eedplatek.prod
