@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eba5dc66d2450ef1351c00fb8541291c",
+    "content-hash": "0f2ee0b94b8bedfd2e2eda53ace1e7bf",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4864,6 +4864,16 @@
                 "source": "http://cgit.drupalcode.org/layouts"
             },
             "time": "2018-03-09T15:22:26+00:00"
+        },
+        {
+            "name": "drupal/letsencrypt_challenge_d8",
+            "version": "8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/sandbox/radimklaska/letsencrypt_challenge_d8.git",
+                "reference": "8.x-1.x"
+            },
+            "type": "drupal-module"
         },
         {
             "name": "drupal/lightning_api",
