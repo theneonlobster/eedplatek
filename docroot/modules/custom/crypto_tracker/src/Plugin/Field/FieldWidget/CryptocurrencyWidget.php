@@ -5,12 +5,13 @@ namespace Drupal\crypto_tracker\Plugin\Field\FieldWidget;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
-use GuzzleHttp\Client;
+use Drupal\crypto_tracker\CryptoTrackerClient;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
 
 /**
- * Plugin implementation of the 'text_hero' widget.
- *
- * @todo make thies work with text fields instead of a custom field type.
+ * Plugin implementation of the 'cryptocurrency_widget' widget.
  *
  * @FieldWidget(
  *   id = "cryptocurrency_widget",
@@ -21,38 +22,48 @@ use GuzzleHttp\Client;
  *   }
  * )
  */
-class CryptocurrencyWidget extends WidgetBase {
+class CryptocurrencyWidget extends WidgetBase implements ContainerFactoryPluginInterface {
+
+  protected $client;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct($plugin_id, $plugin_definition, FieldDefinitionInterface $field_definition, array $settings, array $third_party_settings, CryptoTrackerClient $client) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $third_party_settings);
+    $this->client = $client;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['third_party_settings'],
+      $container->get('crypto_tracker.client')
+    );
+  }
 
   /**
    * {@inheritdoc}
    */
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
-    $payload = $this->thepayload();
-    $element += [
-      '#type' => 'select',
-      '#options' => $payload,
-    ];
-    return ['value' => $element];
-  }
-
-  /**
-   * TODO: Change the name of this function.
-   */
-  public function thepayload($param = NULL) {
-    $uri = 'api.coinmarketcap.com/v1/ticker/';
-
-    $client = new Client();
-    $request = $client->get($uri);
-
-    $response = json_decode($request->getBody(), TRUE);
-
-    $currencies = $response;
-    // Parse the reponse and add values to an array.
+    $response = $this->client->getCurrency();
+    // Parse the response and add values to an array.
     $options = [];
-    foreach ($currencies as $currency) {
+    foreach ($response as $currency) {
       $options[$currency['name']] = $currency['name'];
     }
-    return $options;
+    $element += [
+      '#type' => 'select',
+      '#options' => $options,
+      '#default_value' => isset($items[$delta]->value) ? $items[$delta]->value : NULL,
+    ];
+    return ['value' => $element];
   }
 
 }
