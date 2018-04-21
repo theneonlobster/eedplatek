@@ -1,0 +1,8 @@
+name: Untappd Alexa
+type: module
+description: Integrated Untappd's API with Amazon Echo.
+core: 8.x
+package: Alexa
+dependencies:
+  - alexa
+  - untappd

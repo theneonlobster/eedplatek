@@ -1,0 +1,7 @@
+untappd_settings:
+  path: 'admin/config/services/untappd'
+  defaults:
+    _form: '\Drupal\untappd\Form\UntappdSettingsForm'
+    _title: 'Untappd Settings'
+  requirements:
+    _permission: 'administer untappd'

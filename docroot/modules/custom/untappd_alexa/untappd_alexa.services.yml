@@ -1,0 +1,6 @@
+services:
+  untappd_alexa.request_subscriber:
+    class: Drupal\untappd_alexa\EventSubscriber\RequestSubscriber
+    arguments: ['@untappd.client']
+    tags:
+      - { name: event_subscriber }

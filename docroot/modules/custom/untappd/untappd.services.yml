@@ -1,0 +1,5 @@
+# Service definition in YAML.
+services:
+  untappd.client:
+    class: Drupal\untappd\UntappdClient
+    arguments: ['@http_client', '@config.factory']

@@ -1,0 +1,6 @@
+name: Untappd HTTP Client
+type: module
+description: 'An HTTP client that communicates with the Untappd API.'
+package: Custom
+core: 8.x
+configure: untappd_settings
