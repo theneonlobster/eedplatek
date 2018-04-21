@@ -4,7 +4,9 @@ namespace Drupal\crypto_tracker\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
-use GuzzleHttp\Client;
+use Drupal\crypto_tracker\CryptoTrackerClient;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Provides a 'Top cryptocurrencies' block.
@@ -18,7 +20,29 @@ use GuzzleHttp\Client;
  *   admin_label = @Translation("Crypto Tracker Currencies")
  * )
  */
-class CryptoTrackerCurrenciesBlock extends BlockBase {
+class CryptoTrackerCurrenciesBlock extends BlockBase implements ContainerFactoryPluginInterface {
+
+  protected $client;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct(CryptoTrackerClient $client, $configuration, $plugin_id, $plugin_definition) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->client = $client;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $container->get('crypto_tracker.client'),
+      $configuration,
+      $plugin_id,
+      $plugin_definition
+    );
+  }
 
   /**
    * {@inheritdoc}
@@ -76,18 +100,7 @@ class CryptoTrackerCurrenciesBlock extends BlockBase {
    */
   public function build() {
     $limit = $this->configuration['crypto_tracker_currencies_block_currency_count'];
-
-    $uri = 'api.coinmarketcap.com/v1/ticker/';
-    $options = [
-      'query' => [
-        'limit' => $limit,
-      ],
-    ];
-    $client = new Client();
-    $request = $client->get($uri, $options);
-
-    $response = json_decode($request->getBody(), TRUE);
-
+    $response = $this->client->getCurrency('', $limit);
     $render_array['currency_list'] = [
       // The theme function to apply to the #items.
       '#theme' => 'crypto_tracker',

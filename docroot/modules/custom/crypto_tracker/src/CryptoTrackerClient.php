@@ -12,7 +12,7 @@ class CryptoTrackerClient {
 
   protected $client;
 
-  protected $baseUrl;
+  protected $config;
 
   /**
    * {@inheritdoc}
@@ -35,6 +35,7 @@ class CryptoTrackerClient {
     $request = $this->client->get($this->baseUrl . $currency, $options);
     // @TODO: Add caching.
     // @TODO: Add error handling.
+    // @TODO: Sanititze the cryptocurrency name (lowercase and replace spaces).
     return json_decode($request->getBody(), TRUE);
   }
 
