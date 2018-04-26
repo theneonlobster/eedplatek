@@ -34,6 +34,19 @@
           "reference": "8.x-1.x"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "drupal/crypto_tracker",
+        "version": "8.0.0",
+        "type": "drupal-module",
+        "source": {
+          "url": "git@github.com:theneonlobster/crypto_tracker.git",
+          "type": "git",
+          "reference": "8.x-1.x"
+        }
+      }
     }
   ],
   "require": {
@@ -48,6 +61,7 @@
     "drupal/coffee": "^1.0@beta",
     "drupal/colorbox": "^1.4",
     "drupal/config_ignore": "^2.1",
+    "drupal/crypto_tracker": "^8.0",
     "drupal/ds": "^3.1",
     "drupal/entityqueue": "^1.0@alpha",
     "drupal/extlink": "^1.0",

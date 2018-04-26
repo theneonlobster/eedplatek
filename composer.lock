@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f2ee0b94b8bedfd2e2eda53ace1e7bf",
+    "content-hash": "af717ebc7716b6eb31e3b78e3badb6a7",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3158,6 +3158,16 @@
                 "source": "http://cgit.drupalcode.org/crop",
                 "issues": "https://www.drupal.org/project/issues/crop"
             }
+        },
+        {
+            "name": "drupal/crypto_tracker",
+            "version": "8.0.0",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:theneonlobster/crypto_tracker.git",
+                "reference": "8.x-1.x"
+            },
+            "type": "drupal-module"
         },
         {
             "name": "drupal/ctools",
