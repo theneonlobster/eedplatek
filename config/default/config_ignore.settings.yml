@@ -3,7 +3,7 @@ ignored_config_entities:
   2: acquia_connector.settings
   4: 'config_split.config_split.blog:status'
   6: 'config_split.config_split.theneonlobster:status'
-  8: 'core.extension:module:codesnippet'
-  10: 'lightning_core.versions:codesnippet'
+  8: core.extension
+  10: lightning_core.versions
 _core:
   default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk
