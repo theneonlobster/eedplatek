@@ -2,4 +2,10 @@
 services:
   crypto_tracker.client:
     class: Drupal\crypto_tracker\CryptoTrackerClient
-    arguments: ['@http_client', '@config.factory']
+    arguments: ['@http_client', '@config.factory', '@logger.factory', '@cache.crypto_tracker']
+  cache.crypto_tracker:
+    class: Drupal\Core\Cache\CacheBackendInterface
+    tags:
+      - { name: cache.bin }
+    factory: cache_factory:get
+    arguments: ['crypto_tracker']

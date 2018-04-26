@@ -13,11 +13,14 @@ class CryptoTrackerSettingsForm extends ConfigFormBase {
 
   protected $baseUrl;
 
+  protected $cachePeriod;
+
   /**
    * {@inheritdoc}
    */
   public function __construct(ConfigFactory $config) {
     $this->baseUrl = $config->get('crypto_tracker.settings')->get('endpoint');
+    $this->cachePeriod = $config->get('crypto_tracker.settings')->get('cache_period');
   }
 
   /**
@@ -49,6 +52,13 @@ class CryptoTrackerSettingsForm extends ConfigFormBase {
       '#required' => TRUE,
       '#default_value' => $this->baseUrl,
     ];
+    $form['cache_period'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Cache period in seconds'),
+      '#description' => $this->t('The period of time that will elapse before repeating a request.'),
+      '#required' => TRUE,
+      '#default_value' => $this->cachePeriod,
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -57,7 +67,6 @@ class CryptoTrackerSettingsForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    // @TODO
     // Trim the submitted value of whitespace and slashes.
     $baseUrl = ltrim(trim($form['endpoint']['#value']), " \\/");
     if (!empty($baseUrl)) {

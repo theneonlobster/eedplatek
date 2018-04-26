@@ -1,0 +1,6 @@
+crypto_settings:
+  route_name: 'crypto_settings'
+  title: 'Crypto Tracker Settings'
+  description: 'Manage settings for the Crypto Tracker module'
+  parent: 'system.admin_config_services'
+  menu_name: admin

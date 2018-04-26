@@ -1,1 +1,2 @@
 endpoint: 'api.coinmarketcap.com/v1/ticker/'
+cache_period: 60
