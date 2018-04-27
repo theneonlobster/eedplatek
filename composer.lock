@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "af717ebc7716b6eb31e3b78e3badb6a7",
+    "content-hash": "4db1b885e59348c83c2d63b7db3b5cdd",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3164,7 +3164,7 @@
             "version": "8.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:theneonlobster/crypto_tracker.git",
+                "url": "https://github.com/theneonlobster/crypto_tracker.git",
                 "reference": "8.x-1.x"
             },
             "type": "drupal-module"

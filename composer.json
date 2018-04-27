@@ -42,7 +42,7 @@
         "version": "8.0.0",
         "type": "drupal-module",
         "source": {
-          "url": "git@github.com:theneonlobster/crypto_tracker.git",
+          "url": "https://github.com/theneonlobster/crypto_tracker.git",
           "type": "git",
           "reference": "8.x-1.x"
         }
