@@ -1,0 +1,7 @@
+untappd_alexa.admin_settings:
+  path: '/admin/config/services/alexa/untappd'
+  defaults:
+    _form: '\Drupal\untappd_alexa\Form\ModuleConfigurationForm'
+    _title: 'Alexa Configuration'
+  requirements:
+    _permission: 'administer alexa configuration'
