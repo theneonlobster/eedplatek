@@ -1,7 +1,0 @@
-cryptalexa.admin_settings:
-  path: '/admin/config/services/alexa/crypto'
-  defaults:
-    _form: '\Drupal\cryptalexa\Form\ModuleConfigurationForm'
-    _title: 'Alexa Configuration'
-  requirements:
-    _permission: 'administer alexa configuration'

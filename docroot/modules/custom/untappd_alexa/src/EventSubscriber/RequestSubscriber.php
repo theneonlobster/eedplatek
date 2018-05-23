@@ -6,7 +6,6 @@ use Drupal\alexa\AlexaEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Drupal\untappd\UntappdClient;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Config\ConfigFactory;
 
 /**
  * An event subscriber for Alexa request events.
@@ -15,14 +14,11 @@ class RequestSubscriber implements EventSubscriberInterface {
 
   protected $client;
 
-  protected $applicationID;
-
   /**
    * {@inheritdoc}
    */
-  public function __construct(UntappdClient $client, ConfigFactory $config) {
+  public function __construct(UntappdClient $client) {
     $this->client = $client;
-    $this->applicationID = $config->get('untappd_alexa.settings')->get('application_id');
   }
 
   /**
@@ -52,26 +48,24 @@ class RequestSubscriber implements EventSubscriberInterface {
     $request = $event->getRequest();
     $response = $event->getResponse();
 
-    if ($this->request->applicationID == $this->applicationID) {
-      switch ($request->intentName) {
-        case 'AMAZON.HelpIntent':
-          $response->respond('You can ask anything and I will respond with "Hello Drupal"');
-          break;
+    switch ($request->intentName) {
+      case 'AMAZON.HelpIntent':
+        $response->respond('You can ask anything and I will respond with "Hello Drupal"');
+        break;
 
-        case 'OnTap':
-          $bar = $request->data['request']['intent']['slots']['Bar']['resolutions']['resolutionsPerAuthority'][0]['values'][0]['value']['name'];
-          $untappd_response = $this->client->get('venue/info/' . $bar);
-          $beers = [];
-          foreach ($untappd_response['response']['venue']['media']['items'] as $beer) {
-            $beers[$beer['beer']['bid']] = $beer['beer']['beer_name'];
-          }
-          $response->respond(implode(", ", $beers));
-          break;
+      case 'OnTap':
+        $bar = $request->data['request']['intent']['slots']['Bar']['resolutions']['resolutionsPerAuthority'][0]['values'][0]['value']['name'];
+        $untappd_response = $this->client->get('venue/info/' . $bar);
+        $beers = [];
+        foreach ($untappd_response['response']['venue']['media']['items'] as $beer) {
+          $beers[$beer['beer']['bid']] = $beer['beer']['beer_name'];
+        }
+        $response->respond(implode(", ", $beers));
+        break;
 
-        default:
-          $response->respond('Hello Drupal');
-          break;
-      }
+      default:
+        $response->respond('Hello Drupal');
+        break;
     }
   }
 
