@@ -1,146 +1,146 @@
 {
-  "name": "acquia/blt-project",
-  "description": "Project template for Drupal 8 sites built with BLT.",
-  "type": "project",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "package",
-      "package": {
-        "name": "ckeditor/codesnippet",
-        "version": "4.9.1",
-        "type": "drupal-library",
-        "dist": {
-          "type": "zip",
-          "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.1.zip"
+    "name": "acquia/blt-project",
+    "description": "Project template for Drupal 8 sites built with BLT.",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ckeditor/codesnippet",
+                "version": "4.9.1",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://download.ckeditor.com/codesnippet/releases/codesnippet_4.9.1.zip"
+                },
+                "autoload": {
+                    "classmap": [
+                        "."
+                    ]
+                }
+            }
         },
-        "autoload": {
-          "classmap": [
-            "."
-          ]
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/letsencrypt_challenge_d8",
+                "version": "8.0.0",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://git.drupal.org/sandbox/radimklaska/letsencrypt_challenge_d8.git",
+                    "type": "git",
+                    "reference": "8.x-1.x"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/crypto_tracker",
+                "version": "8.0.0",
+                "type": "drupal-module",
+                "source": {
+                    "url": "https://github.com/theneonlobster/crypto_tracker.git",
+                    "type": "git",
+                    "reference": "8.x-1.x"
+                }
+            }
         }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "drupal/letsencrypt_challenge_d8",
-        "version": "8.0.0",
-        "type": "drupal-module",
-        "source": {
-          "url": "https://git.drupal.org/sandbox/radimklaska/letsencrypt_challenge_d8.git",
-          "type": "git",
-          "reference": "8.x-1.x"
-        }
-      }
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "drupal/crypto_tracker",
-        "version": "8.0.0",
-        "type": "drupal-module",
-        "source": {
-          "url": "https://github.com/theneonlobster/crypto_tracker.git",
-          "type": "git",
-          "reference": "8.x-1.x"
-        }
-      }
-    }
-  ],
-  "require": {
-    "acquia/blt": "9.x-dev",
-    "ckeditor/codesnippet": "4.9.1",
-    "drupal/admin_toolbar": "^1.23",
-    "drupal/alexa": "1.x-dev",
-    "drupal/asset_injector": "^2.1",
-    "drupal/bootstrap": "^3.11",
-    "drupal/bootstrap_paragraphs": "^2.0@beta",
-    "drupal/codesnippet": "^1.6",
-    "drupal/coffee": "^1.0@beta",
-    "drupal/colorbox": "^1.4",
-    "drupal/config_ignore": "^2.1",
-    "drupal/crypto_tracker": "^8.0",
-    "drupal/ds": "^3.1",
-    "drupal/entityqueue": "^1.0@alpha",
-    "drupal/extlink": "^1.0",
-    "drupal/facets": "^1.0@beta",
-    "drupal/field_group": "^1.0",
-    "drupal/google_analytics": "^2.2",
-    "drupal/honeypot": "^1.27",
-    "drupal/image_effects": "^2.0",
-    "drupal/layouts": "1.x-dev",
-    "drupal/letsencrypt_challenge_d8": "^8.0",
-    "drupal/linkit": "^4.3",
-    "drupal/login_security": "^1.3",
-    "drupal/module_filter": "^3.1",
-    "drupal/paragraphs": "^1.2",
-    "drupal/recaptcha": "^2.3",
-    "drupal/redirect": "^1.1",
-    "drupal/search_api_solr": "^1.2",
-    "drupal/simple_sitemap": "^2.11",
-    "drupal/views_bootstrap": "^3.0",
-    "drupal/webform": "^5.0@RC"
-  },
-  "require-dev": {
-    "geerlingguy/drupal-vm": "^4.8"
-  },
-  "scripts": {
-    "post-create-project-cmd": [
-      "blt internal:create-project:init-repo"
-    ]
-  },
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "enable-patching": true,
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
     ],
-    "installer-paths": {
-      "docroot/core": [
-        "type:drupal-core"
-      ],
-      "docroot/modules/contrib/{$name}": [
-        "type:drupal-module"
-      ],
-      "docroot/modules/custom/{$name}": [
-        "type:drupal-custom-module"
-      ],
-      "docroot/profiles/contrib/{$name}": [
-        "type:drupal-profile"
-      ],
-      "docroot/profiles/custom/{$name}": [
-        "type:drupal-custom-profile"
-      ],
-      "docroot/themes/contrib/{$name}": [
-        "type:drupal-theme"
-      ],
-      "docroot/themes/custom/{$name}": [
-        "type:drupal-custom-theme"
-      ],
-      "docroot/libraries/{$name}": [
-        "type:drupal-library",
-        "type:bower-asset",
-        "type:npm-asset"
-      ],
-      "drush/contrib/{$name}": [
-        "type:drupal-drush"
-      ]
+    "require": {
+        "acquia/blt": "9.x-dev",
+        "ckeditor/codesnippet": "4.9.1",
+        "drupal/admin_toolbar": "^1.23",
+        "drupal/alexa": "1.x-dev",
+        "drupal/asset_injector": "^2.1",
+        "drupal/bootstrap": "^3.11",
+        "drupal/bootstrap_paragraphs": "^2.0@beta",
+        "drupal/codesnippet": "^1.6",
+        "drupal/coffee": "^1.0@beta",
+        "drupal/colorbox": "^1.4",
+        "drupal/config_ignore": "^2.1",
+        "drupal/crypto_tracker": "^8.0",
+        "drupal/ds": "^3.1",
+        "drupal/entityqueue": "^1.0@alpha",
+        "drupal/extlink": "^1.0",
+        "drupal/facets": "^1.0@beta",
+        "drupal/field_group": "^1.0",
+        "drupal/google_analytics": "^2.2",
+        "drupal/honeypot": "^1.27",
+        "drupal/image_effects": "^2.0",
+        "drupal/layouts": "1.x-dev",
+        "drupal/letsencrypt_challenge_d8": "^8.0",
+        "drupal/linkit": "^4.3",
+        "drupal/login_security": "^1.3",
+        "drupal/module_filter": "^3.1",
+        "drupal/paragraphs": "^1.2",
+        "drupal/recaptcha": "^2.3",
+        "drupal/redirect": "^1.1",
+        "drupal/search_api_solr": "^1.2",
+        "drupal/simple_sitemap": "^2.11",
+        "drupal/views_bootstrap": "^3.0",
+        "drupal/webform": "^5.0@RC"
     },
-    "merge-plugin": {
-      "require": [
-        "blt/composer.required.json",
-        "blt/composer.suggested.json"
-      ],
-      "merge-extra": true,
-      "merge-extra-deep": true,
-      "merge-scripts": true,
-      "replace": false,
-      "ignore-duplicates": true
+    "require-dev": {
+        "geerlingguy/drupal-vm": "^4.8"
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "blt internal:create-project:init-repo"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "enable-patching": true,
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "merge-plugin": {
+            "require": [
+                "blt/composer.required.json",
+                "blt/composer.suggested.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true,
+            "replace": false,
+            "ignore-duplicates": true
+        }
     }
-  }
 }
