@@ -9,6 +9,8 @@ git:
   default_branch: master
   remotes:
     - 'eedplatek@svn-9994.prod.hosting.acquia.com:eedplatek.git'
+deploy:
+  tag_source: true
 drush:
   aliases:
     remote: '${project.machine_name}.prod'
