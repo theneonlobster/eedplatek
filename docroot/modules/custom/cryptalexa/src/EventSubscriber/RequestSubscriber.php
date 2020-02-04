@@ -54,8 +54,11 @@ class RequestSubscriber implements EventSubscriberInterface {
         break;
 
       case 'CryptocurrencyValue':
+        // Find the value of the slot in the request from Amazon
         $currency = $request->data['request']['intent']['slots']['Cryptocurrency']['resolutions']['resolutionsPerAuthority'][0]['values'][0]['value']['name'];
+        // Pass the value to the client.
         $cmcresponse = $this->client->getCurrency($currency);
+        // Respond to the request with the price.
         $response->respond($cmcresponse[0]['price_usd']);
         break;
 
